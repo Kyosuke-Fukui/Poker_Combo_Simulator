@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>poker simulator</title>
+</head>
+<style>
+    table#oppRange {
+        width: 50%;
+        margin: 0 auto;
+        border-collapse: collapse;
+    }
+
+    table#oppRange td {
+        border: 1px solid #b9b9b9;
+        text-align: center;
+        padding: 3px;
+    }
+
+    div#position {
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    div#select {
+        width: 580px;
+        margin: 0 auto;
+    }
+
+    h1,
+    h3 {
+        text-align: center;
+    }
+
+    #resultArea {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        font-size: small;
+    }
+
+    #oppResult {
+        margin-left: 20px;
+    }
+</style>
+
+<body>
+    <h1>ポーカー　シミュレーター</h1>
+    <div style="display: flex; justify-content: center;">
+        <div>
+            <h3>コミュニティカード</h3>
+            <input type="text" id="flop1" size="5">
+            <input type="text" id="flop2" size="5">
+            <input type="text" id="flop3" size="5">
+            <input type="text" id="turn" size="5">
+            <input type="text" id="river" size="5">
+
+            <h3>自分の手札</h3>
+            <input type="text" id="myhand1" size="5">
+            <input type="text" id="myhand2" size="5">
+
+            <button id="start">スタート</button>
+            <button id="showCombo">コンビ数表示</button>
+            <div id="resultArea">
+                <div id="result"></div>
+                <div id="oppResult"></div>
+            </div>
+        </div>
+        <div>
+            <h3>相手のレンジ</h3>
+            <table id="oppRange"></table><br>
+            <div id="position">
+                <input type="radio" name="position" value="EP" checked>EP
+                <input type="radio" name="position" value="HJ">HJ
+                <input type="radio" name="position" value="CO">CO
+                <input type="radio" name="position" value="BTN">BTN<br>
+            </div>
+            <div id="select">
+                <input type="text" id="custom" size=70>
+                <button id="display">表示</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script src="./index.js">
+
+    </script>
+</body>
+
+</html>
